@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmented Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <button onclick="showSegment('first')">Party Information</button>
+        <button onclick="showSegment('second')">Logistics</button>
+        <button onclick="showSegment('third')">Additional Services</button>
+    </div>
+
+    <form id="segmentedForm">
+
+
+
+        <div id="first" class="form-segment active">
+            <h2>Booking Party Information</h2>
+
+            <div class="l1">
+                <div class="form-group">
+                    <label for="firm-name">Firm Name:</label>
+                    <input type="text" id="firm-name" name="firm-name">
+                </div>
+                <div class="form-group">
+                    <label for="booking-contact-name">Booking Contact Name:</label>
+                    <input type="text" id="booking-contact-name" name="booking-contact-name"><br>
+                </div>
+            </div>
+
+            <div class="l1">
+                <div class="form-group">
+                    <label for="phone-number">Phone Number:</label><br>
+                    <input type="text" id="phone-number" name="phone-number"><br>
+                </div>
+                <div class="form-group">
+                    <label for="billing-address">Billing Address:</label><br>
+                    <input type="text" id="billing-address" name="billing-address"><br>
+                </div>
+            </div>
+            <div class="l1">
+                <div class="form-group">
+                    <label for="zip-postal-code">Zip/Postal Code:</label>
+                    <input type="text" id="zip-postal-code" name="zip-postal-code">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country"><br>
+                </div>
+            </div>
+            <div class="l2">
+                <div class="form-group">
+                    <label for="role">Role:</label><br>
+                    <select name="cars" id="cars">
+                        <option value="">Choose an option</option>
+                        <option value="">Cm</option>
+                        <option value="saab">MLA</option>
+                        <option value="mercedes">MP</option>
+                        <option value="audi">PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nameofrepresentedclient">Name of Represented Client</label><br>
+                    <input type="text" id="country" name="country"><br>
+                </div>
+            </div>
+
+            <div class="l2">
+                <div class="form-group">
+                    <label for="lead-counselor-name">Lead Counsellor Name:</label><br>
+
+                    <input type="text" id="lead-counselor-name" name="lead-counselor-name"><br>
+                </div>
+                <div class="form-group">
+                    <label for="lead-counselor-email">Email:</label><br> <input type="text" id="lead-counselor-email"
+                        name="lead-counselor-email"><br>
+                </div>
+            </div>
+            <div id="lead-counselors-list"></div>
+
+
+            <input type="text" id="add-lead-counselor" placeholder="+add lead counsellor">
+
+            <h2>Opposing Party Information</h2>
+
+            <div class="l1">
+                <div class="form-group">
+                    <label for="firm-name">Firm Name:</label>
+                    <input type="text" id="firm-name" name="firm-name">
+                </div>
+                <div class="form-group">
+                    <label for="booking-contact-name">Booking Contact Name:</label>
+                    <input type="text" id="booking-contact-name" name="booking-contact-name"><br>
+                </div>
+            </div>
+            <div class="l1">
+                <div class="form-group">
+                    <label for="phone-number">Phone Number:</label><br>
+                    <input type="text" id="phone-number" name="phone-number"><br>
+                </div>
+                <div class="form-group">
+                    <label for="billing-address">Billing Address:</label><br>
+                    <input type="text" id="billing-address" name="billing-address"><br>
+                </div>
+            </div>
+            <div class="l1">
+                <div class="form-group">
+                    <label for="zip-postal-code">Zip/Postal Code:</label><br>
+                    <input type="text" id="zip-postal-code" name="zip-postal-code">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country"><br>
+                </div>
+            </div>
+            <div class="l2">
+                <div class="form-group">
+                    <label for="role">Role:</label><br>
+                    <select name="cars" id="cars">
+                        <option value="">Choose an option</option>
+                        <option value="">Cm</option>
+                        <option value="saab">MLA</option>
+                        <option value="mercedes">MP</option>
+                        <option value="audi">PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="nameofrepresentedclient">Name of Represented Client</label><br> <input type="text"
+                        id="country" name="country"><br>
+                </div>
+            </div>
+
+            <div class="l2">
+                <div class="form-group">
+                    <label for="lead-counselor-name">Lead Counsellor Name:</label><br>
+
+                    <input type="text" id="lead-counselor-name" name="lead-counselor-name"><br>
+                </div>
+                <div class="form-group">
+                    <label for="lead-counselor-email">Email:</label><br> <input type="text" id="lead-counselor-email"
+                        name="lead-counselor-email"><br>
+                </div>
+            </div>
+            <div id="lead-counselors-list1"></div>
+            <div id="add-party"></div>
+            <input type="text" id="add-lead-counselor1" placeholder="+add lead counsellor">
+            <button type="button" id="btn">add additonal parties</button>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div id="second" class="form-segment">
+
+            <h2>Basic Logistics</h2>
+            <div class="l1">
+                <div class="form-group">
+                    <label for="textBox">Style of cause</label>
+                    <input type="text" id="textBox" name="textBox">
+                </div>
+                <div class="form-group">
+                    <label for="textBox">Court File#</label>
+                    <input type="text" id="textBox" name="textBox">
+                </div>
+                <div class="form-group">
+                    <label for="textBox">Booking Dates</label>
+                    <input type="datetime-local" id="textBox" name="textBox">
+                </div>
+            </div>
+        
+        <div class="l1">
+            <div class="form-group">
+                <label for="textBox">Start time</label>
+                <input type="text" id="textBox" name="textBox">
+            </div>
+            <div class="form-group">
+                <label for="textBox"></label>
+               <br>
+           
+              
+               <select name="cars" id="cars">
+                   <option value="">Choose an option</option>
+                   <option value="">1:00</option>
+                   <option value="saab">2:00</option>
+                   <option value="mercedes">3:00</option>
+                   <option value="audi">4:00</option>
+               </select>
+            </div>
+            <div class="form-group">
+                <label for="textBox">Time Zone</label>
+           
+                <input type="text" id="textBox" name="textBox">
+            </div>
+        </div>
+
+        <div class="l1">
+            <div class="form-group">
+                <label for="textBox">Arbitrator(s)</label>
+                <input type="text" id="textBox" name="textBox">
+            </div>
+            <div class="form-group">
+                <br>
+                <input type="text" id="textBox" name="textBox" placeholder="email">
+
+            </div>
+        </div>
+        <div id="Arbitrator-list"></div>
+        <input type="text" id="add-Arbitrator" placeholder="+add Arbitrator" style="width: 30%;">
+        <div id="toggle4">
+            Tribunal seceratary?
+            <label class="switch">
+
+                <input type="checkbox" checked id="l5" onclick="toggleQuestion8()">
+                <span class="slider round"></span>
+            </label>
+
+        </div>
+        
+        <div id="l4" >
+            <div class="l1">
+                <div class="form-group">
+                    <label for="textBox"></label>
+                    <br>
+                    <input type="text" id="textBox" name="textBox" placeholder="Tribunal seceratary name">
+                </div>
+                <div class="form-group">
+                    <br>
+                    <input type="text" id="textBox" name="textBox" placeholder="email">
+    
+                </div>
+            </div>
+            <div class="l1">
+            <div class="form-group">
+                <label for="textBox">Witnesses(s)</label>
+                <input type="text" id="textBox" name="textBox">
+            </div>
+            <div class="form-group">
+                <br>
+                <input type="text" id="textBox" name="textBox" placeholder="email">
+
+            </div>
+            </div>
+            <div id="Witnesses-list"></div>
+            <input type="text" id="add-witnesses" placeholder="+add witnesses" style="width: 30%;">
+        </div>
+
+
+
+
+
+
+        <h2>Virtual Logistics</h2>
+        <div id="toggle">
+            Do You require a VCM(virtual case Manager)
+            <label class="switch">
+
+                <input type="checkbox" checked id="t" onclick="toggleQuestion()">
+                <span class="slider round"></span>
+
+            </label>
+
+        </div>
+        <div id="m1">
+            <div class="additional-question" id="additionalQuestion">
+                <div class="l1">
+                    <div class="form-group">
+                        <label for="textBox">Is there a particular VCM you want to work with?</label>
+                        <input type="text" id="textBox" name="textBox">
+                    </div>
+                </div>
+            </div>
+            <div class="l2" id="k1">
+
+                <div class="form-group">
+                    <label for="textBox">Select a Virtual Platform</label>
+                    <input type="text" id="textBox" name="textBox">
+                </div>
+                <div class="form-group">
+                    <label for="textBox">Number of Virtual Breakout Rules</label>
+                    <label for="role">Role:</label><br>
+                    <select name="cars" id="cars">
+                        <option value="">Choose an option</option>
+                        <option value="">1</option>
+                        <option value="saab">2</option>
+                        <option value="mercedes">3</option>
+                        <option value="audi">4</option>
+                    </select>
+                </div>
+
+
+            </div>
+            <div class="l1">
+                <div class="form-group">
+                    <div id="toggle1">
+                        Do You need us to provide Document Manager Services
+                        <label class="switch">
+
+                            <input type="checkbox" id="ti" onclick="toggleQuestion1()">
+                            <span class="slider round"></span>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="m2">
+
+                <div class="l1">
+                    <div class="form-group">
+                        <br>
+                        <label for="textBox">Do you need us any special accomodations for your booking that out I.T
+                            teamcan look into prior to the start date? </label>
+                        <input type="text" id="textBox" name="textBox">
+                    </div>
+                    <div class="form-group">
+                        <br>
+                        <div id="toggle2">
+                            Do You need us to provide Document Manager Services
+                            <label class="switch">
+
+                                <input type="checkbox"  id="tid" onclick="toggleQuestion()">
+                                <span class="slider round"></span>
+                            </label>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="third" class="form-segment">
+            <h2>Court Reporting</h2>
+            <div id="toggle6">
+                Will this matter plan to have a Court Reporter?
+                <label class="switch">
+
+                    <input type="checkbox"  id="b" onclick="toggleQuestion5()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div id="m6">
+                <div id="k5">
+                    <div class="additional-question" id="additionalQuestion">
+                        <div class="l1">
+                            <div class="form-group">
+                                <label for="textBox">Would you like an Artibiration Place Court Reporter</label>
+                                <input type="text" id="textBox" name="textBox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l1">
+                        <div class="form-group">
+                            <label for="textBox">Is there any Specific Artibiration Place you Prefer?</label>
+                            <input type="text" id="textBox" name="textBox">
+                        </div>
+                    </div>
+                    <br>
+                    <div id="toggle">
+                        Will transcript is required?
+                        <label class="switch">
+
+                            <input type="checkbox" id="b1" onclick="toggleQuestion6()">
+                            <span class="slider round"></span>
+                        </label>
+
+                    </div>
+
+                    <div id="m7">
+                        <div class="l1">
+                            <div class="form-group">
+                                <label for="textBox">Turn Around time?</label>
+                                <input type="text" id="textBox" name="textBox">
+                            </div>
+                        </div>
+
+                        <div id="toggle5">
+                            Mutlingua?
+                            <label class="switch">
+
+                                <input type="checkbox"  id="b2" onclick="toggleQuestion7()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="m8">
+                        <div class="l1">
+                            <div class="form-group">
+                                <label for="textBox">Please non english languages you would like accomodated(seperate by
+                                    comma)</label>
+                                <input type="text" id="textBox" name="textBox">
+                            </div>
+                        </div>
+                        <div class="l1">
+                            <div class="form-group">
+                                <label for="textBox">Daily Rough Draft</label>
+                                <input type="text" id="textBox" name="textBox">
+                            </div>
+                        </div>
+                        <div class="l1">
+                            <div class="form-group">
+                                <label for="textBox">Real time Reporting</label>
+                                <input type="text" id="textBox" name="textBox">
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <h2>Additional Features</h2>
+
+            <div id="toggle3">
+                Do You require interpretation?
+                <label class="switch">
+
+                    <input type="checkbox"  id="a" onclick="toggleQuestion2()">
+                    <span class="slider round"></span>
+                </label>
+
+            </div>
+            <div id="m3">
+                <div class="additional-question" id="additionalQuestion">
+                    <div class="l1">
+                        <div class="form-group">
+                            <label for="textBox">Please List All languages to be interpreted (seperated by
+                                comma)</label>
+                            <input type="text" id="textBox" name="textBox">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="k4">
+                <br>
+                <div id="toggle4">
+                    Do You Require Cart Services
+                    <label class="switch">
+
+                        <input type="checkbox" id="a1" onclick="toggleQuestion3()">
+                        <span class="slider round"></span>
+                    </label>
+
+                </div>
+            </div>
+            <div id="m4">
+                <div id="toggle5">
+                    Will You need to quote prior to the confirmation
+                    <label class="switch">
+
+                        <input type="checkbox"  id="a2" onclick="toggleQuestion4()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+           
+            <div id="m5" class="l1">
+                <div class="form-group">
+                    <label for="textBox">Please list any additional requests or considerations you must have this
+                        time</label>
+                    <input type="text" id="textBox" name="textBox">
+                </div>
+                <br>
+            </div>
+        </div>
+
+
+
+
+
+        </div>
+
+    </form>
+<script>
+    var toggles = document.getElementsByClassName('switch');
+
+
+for (var i = 0; i < toggles.length; i++) {
+
+ toggles[i].getElementsByTagName('input')[0].checked = false;
+
+}
+</script>
+
+
+</body>
+
+</html>
